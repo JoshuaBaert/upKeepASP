@@ -1,0 +1,27 @@
+<div class="user-view" ng-controller="userCtrl">
+	<div class="nav-main" close-create>
+		
+		<div class="nav-lists">
+			<a ui-sref="user.home">
+				<div class="mini-logo btn"><img class="logo-mini" src="./img/upkeep-mini-circle.png" alt=""></i></div>
+			</a>
+			<a ng-repeat="list in user.lists track by $index" ui-sref="user.list.new({listIndex: $index})" ui-sref-opts="{reload: true}">
+				<div class="list-logo btn"><i class="fa {{list.icon}} icon" aria-hidden="true"></i></div>
+			</a>
+			<a ui-sref="user.home.new" open-create>
+				<div class="list-logo btn create-list"><i class="fa fa-plus icon" aria-hidden="true"></i></div>
+			</a>
+		</div>
+		
+		<div>
+			<a ui-sref="user.settings">
+				<div class="user-setting btn"><i class="fa fa-cog icon" aria-hidden="true"></i></div>
+			</a>
+		</div>
+	
+	</div>
+	
+	<ui-view></ui-view>
+
+
+</div>

@@ -1,0 +1,42 @@
+<div class="side-panel-main">
+	
+	
+	
+	
+	<div class="close" close-create>
+		<i class="fa fa-times icon" aria-hidden="true"></i>
+	</div>
+	
+	<div class="title"><h1>New Category</h1></div>
+	
+	<div class="input-wrapper">
+		<h4 class="edit-titles">Name</h4>
+		<input class="edit-input" type="text" ng-model="newList.name">
+	</div>
+	<div class="input-wrapper" ng-cloak>
+		<h4 class="edit-titles">Icon </h4>
+		<!--<input class="edit-input" type="text" ng-model="newList.icon">-->
+		
+		<select class="icon-input" ng-model="newList.icon">
+			<option selected="selected" ng-value="'fa-home'">Home</option>
+			<option ng-value="'fa-car'">Car</option>
+			<option ng-value="'fa-truck'">Truck</option>
+			<option ng-value="'fa-birthday-cake'">Birthday</option>
+			<option ng-value="'fa-money'">Money</option>
+			<option ng-value="'fa-handshake-o'">Deal</option>
+			<option ng-value="'fa-heartbeat'">Health</option>
+			<option ng-value="'fa-motorcycle'">Motorcycle</option>
+			<option ng-value="'fa-paw'">Dog</option>
+			<option ng-value="'fa-university'">School</option>
+		</select>
+		
+	
+	</div>
+	
+	
+	<div class="btns">
+		<div class="btn" ng-click="postList()">Save</div>
+		<div class="btn" close-create>Cancel</div>
+	</div>
+
+</div>

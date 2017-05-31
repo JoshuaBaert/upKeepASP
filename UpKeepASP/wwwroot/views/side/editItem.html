@@ -1,0 +1,29 @@
+<div class="side-panel-main" >
+	
+	<div class="close" close-create>
+		<i class="fa fa-times icon" aria-hidden="true"></i>
+	</div>
+	
+	<div class="title"><h1>{{editItem.name}}</h1></div>
+	
+	<div class="input-wrapper">
+		<h4 class="edit-titles">Name</h4>
+		<input class="edit-input" type="text" ng-model="editItem.name" >
+	</div>
+	<div class="input-wrapper">
+		<h4 class="edit-titles">Date</h4>
+		<input  class="edit-input" type="date" ng-model="editItem.date" >
+	</div>
+	<div class="input-wrapper">
+		<h4 class="edit-titles">Description</h4>
+		<textarea class="text-area" ng-model="editItem.description" cols="30" rows="3"></textarea>
+	</div>
+	
+	
+	<div class="btns">
+		<div class="btn" ng-click="putItem()">Save</div>
+		<div class="btn" ng-click="deleteItem()" ui-sref="user.list.new({listIndex: listIndex})" ui-sref-opts="{reload: true}" close-create>Delete</div>
+		<div class="btn" ng-click="goList()" close-create>Cancel</div>
+	</div>
+
+</div>

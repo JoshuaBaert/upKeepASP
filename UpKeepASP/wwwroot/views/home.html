@@ -1,0 +1,20 @@
+<div class="home-main">
+	
+	<get-user></get-user>
+	
+		
+		<div class="title"><h1>Categories Page</h1></div>
+		<div class="list-mini" ng-repeat="list in user.lists track by $index">
+			<a class="list-mini-name" ui-sref="user.list.new({listIndex: $index})">
+				<div ><h1>{{list.name}}</h1></div>
+			</a>
+			<div class="list-mini-btns" ui-sref="user.home.edit({listIndex: $index})" ui-sref-opts="{reload: true}">
+				<div class="edit-btn"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></div>
+			</div>
+		</div>
+	
+	
+	<ui-view class="side-panel"></ui-view>
+	
+
+</div>

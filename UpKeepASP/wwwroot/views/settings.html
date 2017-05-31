@@ -1,0 +1,43 @@
+<div class="settings-main">
+	
+	<get-user></get-user>
+	
+	<div class="logout" ng-click="logout()">
+		<i class="fa fa-sign-out icon" aria-hidden="true"></i>
+	</div>
+	
+	<div>
+		<div class="title"><h1>Settings</h1></div>
+	</div>
+	<div class="input-wrapper">
+		<h4 class="set-titles">First Name</h4>
+		<input class="set-input" type="text" value="{{user.firstName}}" ng-model="user.firstName">
+	</div>
+	<div class="input-wrapper">
+		<h4 class="set-titles">last Name</h4>
+		<input class="set-input" type="text" value="{{user.lastName}}" ng-model="user.lastName">
+	</div>
+	<div class="input-wrapper">
+		<h4 class="set-titles">Email</h4>
+		<input class="set-input" type="text" value="{{user.email}}" ng-model="user.email">
+	</div>
+	<div class="input-wrapper">
+		<h4 class="set-titles">Phone</h4>
+		<input class="set-input" type="text" value="{{user.phoneNumber}}" ng-model="user.phoneNumber">
+	</div>
+	<div class="input-wrapper check">
+		<h4 class="set-titles">Allow Emails?</h4>
+		<input class="setcheck" type="checkbox" ng-model="user.allowEmail">
+	</div>
+	<div class="input-wrapper check">
+		<h4 class="set-titles">Allow Texts?</h4>
+		<input class="setcheck" type="checkbox" ng-model="user.allowText">
+	</div>
+	
+	
+	<div class="btns">
+		<div class="btn" ng-click="putUser()">Save  </div>
+		<div class="btn" ng-click="goHomeNow()">Cancel</div>
+	</div>
+	
+</div>

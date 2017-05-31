@@ -1,0 +1,35 @@
+<div class="list-main" ng-controller="listsCtrl" >
+	
+	<div class="create" ui-sref="user.list.new({listIndex: listIndex})" open-create>
+		<i class="fa fa-plus icon" aria-hidden="true"></i>
+	</div>
+	
+	<div class="create-margin" close-create>
+		<div class="title">
+			<h1>
+				Category:
+				<br>
+				{{list.name}}
+			</h1>
+		</div>
+		
+		<div class="item-wrapper" ng-repeat="item in list.items track by $index">
+			
+			<div class="item-row">
+				<h4>{{item.name}}</h4>
+				<h4>{{item.date | date : "MM/dd/y"}}</h4>
+			</div>
+			
+			<div class="item-row">
+				<div class="description"><h5>{{item.description}}</h5></div>
+				<div class="edit-btn" ui-sref="user.list.edit({listIndex: listIndex,itemIndex: $index})" ui-sref-opts="{reload: true}" open-create>
+					<i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<ui-view class="side-panel"></ui-view>
+
+</div>
