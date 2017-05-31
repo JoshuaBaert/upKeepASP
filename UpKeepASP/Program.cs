@@ -17,6 +17,7 @@ namespace UpKeepASP
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
+                .UseUrls("http://localhost:4040")
                 .Build();
 
             host.Run();
